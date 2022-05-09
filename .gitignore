@@ -1,0 +1,8 @@
+# Mac OS 排序文件
+.DS_Store
+
+# vscode 配置目录
+.vscode
+
+# nodejs 依赖包
+node_modules/
