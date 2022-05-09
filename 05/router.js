@@ -1,16 +1,20 @@
+/**
+ * 路由
+ */
 const http = require('http');
-const getRawBody = require('raw-body');
 const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  console.log(req.url);          // /test?name=freedom
-  req.on('data', d => {
-    console.log(d.toString());   // {"name":"freedom"}
-  });
-  getRawBody(req).then(function (buf) {
-    console.log(buf);
-  });
-  res.end('strick');
-})
+  // 实例化 URL 类
+  const url = new URL(req.url, 'http://localhost:1234');
+  const { pathname } = url;
+  // 简易路由
+  if(pathname === '/') {
+    res.end('main');
+  }else if(pathname === '/test') {
+    res.end('test');
+  }
+});
 server.listen(1234);
 
+
+ 
+ 
