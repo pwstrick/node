@@ -5,7 +5,9 @@
   "author": "pwstrick",
   "license": "MIT",
   "dependencies": {
-    "raw-body": "^2.5.1"
+    "bunyan": "^1.8.15",
+    "raw-body": "^2.5.1",
+    "verror": "^1.10.1"
   },
   "devDependencies": {}
 }
